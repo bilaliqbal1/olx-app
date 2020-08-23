@@ -1,0 +1,48 @@
+:root{
+  --light-grey: #f7f8f9;
+  --water-color: #23efdb;
+  --ornage-color:#ffce32;
+  --blues-tell:#3a77ff;
+  --dark-mode: #002f34;
+  --white-color: #fff;
+}
+
+*{
+    font-family:  sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav{
+    background: var(--light-grey);
+    color: var(--dark-mode);
+}
+
+#main-header{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 2px; */
+    align-items: center;
+
+}
+
+#search{
+ color: var(--dark-mode);
+ width: 200%;
+ height: 50%;   
+}
+
+
+#olxaddsimg{
+    width: 20vh;
+    height: 20vh;
+}
+
+
+
+#categories{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
