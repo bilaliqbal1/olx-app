@@ -28,7 +28,7 @@ nav{
 
 }
 /* search */
-#searchbar{
+#searchcontainer{
     margin: 0;
     padding: 0;
     position: relative;
@@ -38,26 +38,34 @@ nav{
 
 #search{
  color: var(--dark-mode);
- width: 1000px;
- height: 50px;   
+ width: 700px;
+ height: 55px;   
  color: #000;
  margin: 10px;
  padding: 10px;
 
 }
-#searchbar a{
-font-size: 21px;
+#searchcontainer a{
+font-size: 23px;
 background-color: #000;
 color: #fff;
 padding: 10px;
-top: 11%;
+top: 13%;
 left: 98%;
 position: absolute;
-width: 5%;
+width: 9%;
 text-align: center;
 border: none;
 }
 
+/* countries & location */
+#countries{
+    position: relative;
+}
+#countries #countrysearch{
+    width: 400px;
+    height: 55px;
+}
 
 #olxaddsimg{
     width: 15vh;
@@ -67,10 +75,36 @@ border: none;
     padding: 2px;
 }
 
+#countrysearch{
+    font-size: 23px;
+    margin: 5px;
+    padding: 30px;
+    right: 10px;
+    font-size: 30px;
+}
+
+#arrowdown{
+    position: absolute;
+    top: 30%;
+    right:4%;
+    font-size: 30px;
+    
+}
+
+#searchbar{
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    font-size: 25px;
+
+}
+
 /* Categories */
 
 #categoriesheading{
     background-color: #3a77ff;
+    top: 30%;
+    
     /* text-align: center; */
     height: 75px;
     position: relative;
@@ -80,6 +114,7 @@ border: none;
     position: absolute; 
     right: 50%;
     top: 20%;
+    color: #fff;
 }
 
 #categories{
@@ -93,8 +128,8 @@ border: none;
 background-color:  #f5f5ef;
 color:  #000;
 box-shadow: 0 0 0 0px;
-animation: cubic-bezier(0.075, 0.82, 0.165, 1);
 border-radius: 10px;
+animation: ease-in 0.9s
 }
 
 
