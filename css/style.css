@@ -132,12 +132,50 @@ border-radius: 10px;
 animation: ease-in 0.9s
 }
 
+/* button login signup */
+#btns{
+    margin: 20px;
+    padding: 10px;
+}
 
+#sell-btn{
+border: 10px solid;
+border-top-color: #23efdb;
+border-left-color: #ffce32;
+border-bottom-color: #3a77ff;
+border-right-color: #3a77ff;
 
+margin: 7px;
+padding: 7px;
+font-size: 20px;
+text-align: center;
+border-radius: 80px;
+ /* color: #000; */
+background-color: #fff;
+box-shadow: 0.7px 0.7px 0.8px 0.7px ;
+letter-spacing: 3px;
+}
 
+#plus{
+    margin: 3px;
+    padding: 2px;
+    color: #000;
+    font-size: 22px;
 
+}
 
+#login{
+    border-bottom-color: #23e5db;
+    border-bottom: 1px solid #000;
+    font-size: 22px;
+    color: #000;
+    font-weight: bolder;
+    text-decoration: none;
+}
 
+#login:hover{
+    border: none ;
+}
 
 
 
