@@ -28,43 +28,36 @@ nav{
 
 }
 /* search */
-#searchcontainer{
-    margin: 0;
-    padding: 0;
-    position: relative;
-    border: #000;
+.search-container{
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+.search-container #search-time{
+  width: 40vw;
+  height: 7vh;
+  border:1px solid #000;
+  padding: 5px;
 
+  
 }
 
-#search{
- color: var(--dark-mode);
- width: 700px;
- height: 55px;   
- color: #000;
- margin: 10px;
- padding: 10px;
+#btn-searchbar{
+  width: 4vw;
+  height: 7vh;
+  background: #000;
+  color: #fff;
+}
 
-}
-#searchcontainer a{
-font-size: 23px;
-background-color: #000;
-color: #fff;
-padding: 10px;
-top: 13%;
-left: 98%;
-position: absolute;
-width: 9%;
-text-align: center;
-border: none;
-}
+
 
 /* countries & location */
 #countries{
     position: relative;
 }
 #countries #countrysearch{
-    width: 400px;
-    height: 55px;
+  width: 20vw;
+  height: 7vh;
 }
 
 #olxaddsimg{
@@ -76,11 +69,11 @@ border: none;
 }
 
 #countrysearch{
-    font-size: 23px;
-    margin: 5px;
+    font-size: 20px;  
     padding: 30px;
-    right: 10px;
-    font-size: 30px;
+
+  
+  
 }
 
 #arrowdown{
@@ -94,7 +87,7 @@ border: none;
 #searchbar{
     position: absolute;
     top: 30%;
-    left: 2%;
+    left: 1%;
     font-size: 25px;
 
 }
@@ -104,9 +97,9 @@ border: none;
 #categoriesheading{
     background-color: #3a77ff;
     top: 30%;
-    
+    width: 100%;
     /* text-align: center; */
-    height: 75px;
+    height: 10vh;
     position: relative;
 }
 #categoriesheading h1{
@@ -150,7 +143,6 @@ padding: 7px;
 font-size: 20px;
 text-align: center;
 border-radius: 80px;
- /* color: #000; */
 background-color: #fff;
 box-shadow: 0.7px 0.7px 0.8px 0.7px ;
 letter-spacing: 3px;
