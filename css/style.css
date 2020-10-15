@@ -172,3 +172,22 @@ letter-spacing: 3px;
 
 
 
+/* postHeader */
+
+#postHeader{
+    background: var(--light-grey);
+}
+
+#postHeader a{
+ font-size: 2vw;
+ color: #000;
+ margin: 3vw;
+ padding: 3vw;
+}
+
+#maindivPost{
+    border: 1px solid #000;
+    margin: 3vw;
+    padding: 3vw;
+    text-transform: uppercase;
+}
