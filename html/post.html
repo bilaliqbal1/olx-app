@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link rel="stylesheet" href="../css/style.css">
-    <title>post</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/olxfavicon.png">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>OLX BUY & SELL</title>
 </head>
-<body>
+<body onload="addDataItem()">
     <header id="postHeader">
         <a href="#"><i class="fas fa-arrow-left"></i></a>
 
@@ -30,8 +32,8 @@
             <h1 style="height: 2vw;"></h1>
             <div>
                 <p style="font-size: 15px;line-height: 0%;">Condition*</p>
-                <button class="btnPost">New</button>
-                <button class="btnPost">Used</button>
+                <button class="btnPost" value="new" id="new">New</button>
+                <button class="btnPost" value="used" id="used">Used</button>
             </div>
 <br>
 <h1 style="height: 2vw;"></h1>
@@ -39,15 +41,15 @@
 
             <div>
                 <p style="line-height: 0%;">Type*</p>
-                <button class="btnPost">Mobile</button>
-                <button class="btnPost">Tablets</button>
+                <button name="mobile" class="btnPost" id="mobile">Mobile</button>
+                <button name="tablet" class="btnPost" id="tablet">Tablets</button>
             </div>
 <br>
 <h1 style="height: 2vw;"></h1>
 
             <div>
                 <p style="line-height: 0%;">Ad title</p>
-                <input type="text">
+                <input type="text" name="title" id="adTitle">
                 <p>mention the key features of your item (e.g brand,model,age,type) 0/70</p>
             </div>
 <br>
@@ -55,7 +57,7 @@
 
             <div style="line-height: 0%;">
                 <p>Description</p><br>
-                <input type="text">
+                <input type="text" name="description" id="description">
             </div>
             <span>Include condition, features and reason for selling</span>
         </div>
@@ -64,7 +66,7 @@
         <div style="border-bottom: 1px solid #000; padding: 2vw;">
             <h5 style="font-weight: bold;">Set a price</h5>
             <span>price*</span>
-            <input type="text" name="" id="">
+            <input type="text" name="price" id="price">
         </div>
         <h1 style="height: 2vw;"></h1>
         <div>
@@ -75,13 +77,13 @@
 
 <div style="border-bottom: 1px solid #000; padding: 2vw;">
     <h4>confirm your location</h4>
-    <button class="btnPost">list</button>
-    <button class="btnPost">current</button>
+    <button class="btnPost" id="listLocation">list</button>
+    <button class="btnPost" id="currentLocation">current</button>
     <br>
     <h1 style="height: 2vw;"></h1>
 
     <p>State*</p>
-    <input type="text">
+    <input type="text" id="state" name="state">
     <p>This field is mandatory</p>
 </div>
 <h1 style="height: 2vw;"></h1>
@@ -91,7 +93,7 @@
 
     <img src="" alt="">
     <label>Name</label>
-    <input type="text">
+    <input type="text" name="name" id="name">
     <p>your phone number</p>
     <span>Number</span>
     <h1 style="height: 2vw;"></h1>
@@ -102,7 +104,7 @@
 <h1 style="height: 2vw;"></h1>
 
 <div>
-    <button class="btnPost">Post now</button>
+    <button class="btnPost" onclick="PostAdd()">Post now</button>
 </div>
     </div>
 
