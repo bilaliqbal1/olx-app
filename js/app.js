@@ -19,6 +19,8 @@ auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
 
   });
 }
+
+
 function signInUser(){
     firebase.auth().signInWithEmailAndPassword(emailEl.value, passEl.value)
     .then((sucess)=>{
@@ -31,6 +33,7 @@ function signInUser(){
       });
 
 }
+
 
 function redirectToHome(){
     window.location.href ='../html/post.html'
@@ -69,6 +72,7 @@ function addDataItem(){
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
+        window.location.href ='../html/index.html'
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -76,7 +80,3 @@ function addDataItem(){
 }
 
 
-function PostAdd(){
-    window.location.href ='../html/index.html'
-    addDataItem();
-}
