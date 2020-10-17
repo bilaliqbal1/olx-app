@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>OLX</title>
 </head>
-<body>
+<body onload="getAllUsers()">
   <nav>
       <div id="main-header">
 
@@ -32,8 +32,8 @@
             </form>
           </div>
       <div id="btns">
-          <a href="./form.html" id="login">Login</a>
-          <a href="./form.html" id="sell-btn"><i class="fas fa-plus" id="plus">Sell</i></a>
+          <a href="./form.html" id="login" id="login-btn" value="loginbtn" onclick="loginfun()">Login</a>
+          <a href="./form.html" id="sell-btn" value="sellBtn"><i class="fas fa-plus" id="plus">Sell</i></a>
       </div>
   </div>
   </nav>

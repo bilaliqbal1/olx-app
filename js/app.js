@@ -4,7 +4,8 @@ var passEl = document.getElementById('password');
 var auth = firebase.auth();
 var db = firebase.firestore();
 
-console.log(auth);
+// console.log(auth);
+
 
 
 function signUpUser(){
@@ -20,30 +21,38 @@ auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
   });
 }
 
-
 function signInUser(){
+
     firebase.auth().signInWithEmailAndPassword(emailEl.value, passEl.value)
     .then((sucess)=>{
       console.log('welcome',sucess);
+    //   console.log(auth.currentUser);
       redirectToHome();
     })
     .catch(function(error) {
        
         console.log('error***',error);
       });
-
+   
 }
-
 
 function redirectToHome(){
-    window.location.href ='../html/post.html'
+    localStorage.setItem('userInfo',JSON.stringify(auth.currentUser))
+    window.location.href ='../html/post.html';
+    console.log(auth.currentUser);
 }
+
 
 
 //firestore work
+
+
 function addDataItem(){
+console.log(auth.currentUser.uid);
+
+
     var newItem=document.getElementById('new');
-    var useItem = document.getElementById('used');
+    var useItem = document.getElementById('used');  
     var mobileItem = document.getElementById('mobile');
     var tabletItem= document.getElementById('tablet');
     var adTitleItem=document.getElementById('adTitle');
@@ -67,7 +76,8 @@ function addDataItem(){
         listLocationData: listLocationItem.value,
         currentLocationData: currentLocationItem.value,
         stateData: stateItem.value,
-        nameData: nameItem.value
+        nameData: nameItem.value,
+        uid:  auth.currentUser.uid
         
     })
     .then(function(docRef) {
@@ -80,3 +90,33 @@ function addDataItem(){
 }
 
 
+//RealTimesData updata
+function getRealTimeUpdates(){
+    db.collection("users").where("uid", "==" ,JSON.parse(localStorage.getItem('userInfo')).uid)
+    .onSnapshot(function(snapshot) {
+        snapshot.docChanges().forEach(function(change) {
+            if (change.type === "added") {
+                console.log("user: ", change.doc.data());
+            }
+            // if (change.type === "modified") {
+            //     console.log("Modified city: ", change.doc.data());
+            // }
+            // if (change.type === "removed") {
+            //     console.log("Removed city: ", change.doc.data());
+            // }
+        });
+    });
+}
+
+
+
+//ALL user data show in website
+function getAllUsers(){
+        db.collection("users").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                        console.log(doc.id,doc.data());
+                        // console.log(auth.currentUser); //this object provide all information of user
+                        console.log('raw data',doc);
+                    });
+                });
+            }
