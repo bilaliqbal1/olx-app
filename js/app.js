@@ -120,3 +120,29 @@ function getAllUsers(){
                     });
                 });
             }
+
+
+function addComponent(){
+    var maindiv = document.createElement('div');
+     
+    var divEl =document.createElement('div');
+    var imgEl= document.createElement('img');
+    document.createElement('h1')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
