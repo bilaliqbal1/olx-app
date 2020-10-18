@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>OLX BUY & SELL</title>
 </head>
-<body onload="getRealTimeUpdates()">
+<body>
     <header id="postHeader">
         <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
 
@@ -49,7 +49,7 @@
 
             <div>
                 <p style="line-height: 0%;">Ad title</p>
-                <input type="text" name="title" id="adTitle">
+                <input type="text" name="title" id="adTitle" required>
                 <p>mention the key features of your item (e.g brand,model,age,type) 0/70</p>
             </div>
 <br>
@@ -57,7 +57,7 @@
 
             <div style="line-height: 0%;">
                 <p>Description</p><br>
-                <input type="text" name="description" id="description">
+                <input type="text" name="description" id="description" required>
             </div>
             <span>Include condition, features and reason for selling</span>
         </div>
@@ -83,7 +83,7 @@
     <h1 style="height: 2vw;"></h1>
 
     <p>State*</p>
-    <input type="text" id="state" name="state">
+    <input type="text" id="state" name="state" required>
     <p>This field is mandatory</p>
 </div>
 <h1 style="height: 2vw;"></h1>
@@ -93,7 +93,7 @@
 
     <img src="" alt="">
     <label>Name</label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name" required>
     <p>your phone number</p>
     <span>Number</span>
     <h1 style="height: 2vw;"></h1>

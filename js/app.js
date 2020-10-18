@@ -38,7 +38,7 @@ function signInUser(){
 
 function redirectToHome(){
     localStorage.setItem('userInfo',JSON.stringify(auth.currentUser))
-    window.location.href ='../html/post.html';
+    window.location.href ='../html/index.html';
     console.log(auth.currentUser);
 }
 
@@ -82,7 +82,7 @@ console.log(auth.currentUser.uid);
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
-        window.location.href ='../html/index.html'
+        window.location.href ='../html/index.html';
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -97,6 +97,8 @@ function getRealTimeUpdates(){
         snapshot.docChanges().forEach(function(change) {
             if (change.type === "added") {
                 console.log("user: ", change.doc.data());
+                // addComponentAd(change.doc);
+                getAllUsers();
             }
             // if (change.type === "modified") {
             //     console.log("Modified city: ", change.doc.data());
@@ -117,17 +119,37 @@ function getAllUsers(){
                         console.log(doc.id,doc.data());
                         // console.log(auth.currentUser); //this object provide all information of user
                         console.log('raw data',doc);
+                        addComponentAd(doc.data());
                     });
                 });
             }
 
 
-function addComponent(){
-    var maindiv = document.createElement('div');
+
+           var testPart = document.getElementById('testPart');
+function addComponentAd(adsItem){
+    console.log(adsItem);
      
     var divEl =document.createElement('div');
-    var imgEl= document.createElement('img');
-    document.createElement('h1')
+    // var imgEl= document.createElement('img');
+    var h1El= document.createElement('h1');
+    var h1ElText = document.createTextNode(adsItem.adTitleData);
+    h1El.appendChild(h1ElText);
+
+    var pEl1= document.createElement('p');
+     var pEl1Text = document.createTextNode(adsItem.descriptionData)
+     pEl1.appendChild(pEl1Text)
+
+    var pEl2= document.createElement('p');
+
+    // divEl.appendChild(imgEl);
+    divEl.appendChild(h1El);
+    divEl.appendChild(pEl1);
+    divEl.appendChild(pEl2);
+    testPart.appendChild(divEl);
+    
+    divEl.style.boxShadow = '2px 5px 10px rgba(0,0,0,0.3)';
+
 }
 
 

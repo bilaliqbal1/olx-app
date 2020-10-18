@@ -205,3 +205,16 @@ letter-spacing: 3px;
     background: #23efdb;
     border: 2px solid #40E0D0;
 }
+
+
+#testPart{
+    box-shadow:2px 5px 10px rgba(0,0,0,0.3);
+    /* width: 30vw; */
+    height: 20vw;
+    text-align: center;
+    display: grid;
+    grid-template-columns:repeat(3,3fr);
+   grid-gap: 4vh;
+   margin: 10vh;
+   
+}
