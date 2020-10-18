@@ -216,5 +216,10 @@ letter-spacing: 3px;
     grid-template-columns:repeat(3,3fr);
    grid-gap: 4vh;
    margin: 10vh;
-   
+
 }
+
+/* #testPart:hover{
+    grid-template-columns:repeat(3,3fr);
+
+} */

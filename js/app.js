@@ -38,7 +38,7 @@ function signInUser(){
 
 function redirectToHome(){
     localStorage.setItem('userInfo',JSON.stringify(auth.currentUser))
-    window.location.href ='../html/index.html';
+    window.location.href ='../html/post.html';
     console.log(auth.currentUser);
 }
 
