@@ -92,6 +92,12 @@ nav{
 
 }
 
+.banner img{
+    width: 100%;
+    background-position: center;
+    height: 40vh;
+    object-fit: cover;
+}
 /* Categories */
 
 #categoriesheading{
